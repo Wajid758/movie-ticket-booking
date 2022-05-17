@@ -1,0 +1,26 @@
+<%- include('layout/header')%>
+  <div class="container">
+            <div class="col-md-12">
+                <div class="card my-3">
+                    <div class="row g-0">
+                      <div class="col-md-7">
+                        <div class="text-center">
+                            <img src="/<%= moviebooking.image %>" style="background-size: cover;" width="300"/>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="card-body">
+                          <h5 class="card-title"><strong><%= moviebooking.Mname %></strong></h5>
+                          <p class="card-text"><strong>Directed By : </strong> <span><%= moviebooking.directedBy %></span></p>
+                          <p class="card-text"><strong>Genere : </strong> <span><%= moviebooking.genere %></span></p>
+                          <p class="card-text"><strong>Releasing Date : </strong> <span><%= moviebooking.date %></span></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/seats/<%= moviebooking._id%>" class="btn btn-danger btn-sm">Select Seats</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+    <%- include('layout/footer')%>

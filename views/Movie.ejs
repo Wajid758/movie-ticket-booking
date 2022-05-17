@@ -1,0 +1,45 @@
+<%- include('layout/header') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto mt-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary">
+                        <h3 class="text-light">Add Movies</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="/addmovie" method="post" id="add-movie" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label class="form-label" for="Mname">Name</label>
+                                <input type="text" name="Mname" class="form-control" placeholder="Enter name"
+                                    required />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="direct">Directed By</label>
+                                <input type="text" name="direct" class="form-control" placeholder="Directed By" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="genere">Genere</label>
+                                <input type="text" name="genere" class="form-control" placeholder=""
+                                    required />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="date">Release Date</label>
+                                <input type="date" name="date" class="form-control" placeholder=""
+                                    required />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="image">Poster</label>
+                                <input type="file" name="image" class="form-control"
+                                    required />
+                            </div>
+                            <div class="mb-3 d-grid">
+                                <input type="submit" name="submit" class="btn btn-primary" value="Add Movie"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('layout/footer') %>

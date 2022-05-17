@@ -1,0 +1,35 @@
+
+<%- include('layout/header')%>
+	<div class="container">
+		<div class="col-md-12">
+				<% movielist.forEach((row)=> { %>
+				<div class="movie-card">
+					<div class="movie-header" style="background: url('<%= row.image %>' );  background-size: cover;">
+					</div>
+					<!--movie-header-->
+					<div class="movie-content">
+						<div class="movie-content-header">
+							<a href="#">
+								<h3 class="movie-title"><%= row.Mname %></h3>
+							</a>
+							<div class="imax-logo"></div>
+						</div>
+						<div class="movie-info">
+							<div class="info-section">
+								<label>Releasing Date</label>
+								<span><%= row.date %></span>
+							</div>
+							<!--date,time-->
+							<div class="info-section">
+								<a type="button" class="btn btn-danger btn-sm" href="/booking/<%= row._id %>">Book Now</a>
+							</div>
+						</div>
+					</div>
+					<!--movie-content-->
+				</div>
+				<!--movie-card-->
+				<% })%>
+		</div>
+	</div>
+		
+<%- include('layout/footer') %>
